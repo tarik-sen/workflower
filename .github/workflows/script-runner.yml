@@ -1,0 +1,13 @@
+name: Script Runner
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+    run-first-script-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository code
+              uses: actions/checkout@v4
+            - name: Run first script
+              run: bash first-script.sh
+            - name: Run second script
+              run: bash second-script.sh
