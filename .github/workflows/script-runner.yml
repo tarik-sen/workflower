@@ -11,5 +11,5 @@ jobs:
               run: chmod +x first-script.sh second-script.sh
             - name: Run scripts
               run: |
-                first-script.sh
-                second-script.sh
+                ./first-script.sh
+                ./second-script.sh
