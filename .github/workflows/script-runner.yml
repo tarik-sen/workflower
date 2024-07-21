@@ -7,7 +7,9 @@ jobs:
         steps:
             - name: Check out repository code
               uses: actions/checkout@v4
-            - name: Run first script
-              run: bash first-script.sh
-            - name: Run second script
-              run: bash second-script.sh
+            - name: Make script files executable
+              run: chmod +x first-script.sh second-script.sh
+            - name: Run scripts
+              run: |
+                first-script.sh
+                second-script.sh
